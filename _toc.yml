@@ -1,0 +1,19 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Componentes
+    chapters:
+    - file: ciclo-de-vida/index
+      sections:
+        - file: ciclo-de-vida/entendimento
+        - file: ciclo-de-vida/aquisicao
+        - file: ciclo-de-vida/modelagem
+        - file: ciclo-de-vida/implantacao
+        - file: ciclo-de-vida/aceitacao
+    - file: projeto/index
+  - caption: Execução
+    chapters:
+      - file: execucao/index.md
