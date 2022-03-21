@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelagem &#8212; Metodologia TDSP</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Implantação" href="implantacao.html" />
+    <link rel="prev" title="Aquisição e Entendimento dos Dados" href="aquisicao.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Metodologia TDSP</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Team Data Science Process
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Componentes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Ciclo de Vida
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="entendimento.html">
+     Entendimento do Negócio
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aquisicao.html">
+     Aquisição e Entendimento dos Dados
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Modelagem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="implantacao.html">
+     Implantação
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aceitacao.html">
+     Aceitação pelo Cliente
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projeto/index.html">
+   Estrutura Padronizada de Projeto
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Execução
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../execucao/index.html">
+   Execução de um Projeto Analítico
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ciclo-de-vida/modelagem.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/maetthil/MetodologiaTDSP"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/maetthil/MetodologiaTDSP/issues/new?title=Issue%20on%20page%20%2Fciclo-de-vida/modelagem.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivo">
+   Objetivo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-realizar">
+   Como Realizar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-pre-processar-os-dados-para-o-modelo">
+     Como pré-processar os dados para o modelo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-criar-um-modelo-baseline">
+     Como criar um modelo Baseline?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-treinar-o-modelo">
+     Como treinar o modelo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-que-e-fairness-em-ia">
+     O que é Fairness em IA?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-que-e-data-leakage">
+     O que é Data Leakage?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#artefatos">
+   Artefatos
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Modelagem</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivo">
+   Objetivo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-realizar">
+   Como Realizar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-pre-processar-os-dados-para-o-modelo">
+     Como pré-processar os dados para o modelo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-criar-um-modelo-baseline">
+     Como criar um modelo Baseline?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-treinar-o-modelo">
+     Como treinar o modelo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-que-e-fairness-em-ia">
+     O que é Fairness em IA?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-que-e-data-leakage">
+     O que é Data Leakage?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#artefatos">
+   Artefatos
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="modelagem">
+<h1>Modelagem<a class="headerlink" href="#modelagem" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>Objetivo<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Determinar as melhores variáveis para o modelo de machine learning</p></li>
+<li><p>Definir um modelo Baseline</p></li>
+<li><p>Criar um modelo de machine learning e compará-lo com um Baseline:</p>
+<ul>
+<li><p>É informativo que prediz o alvo de forma acurada</p></li>
+<li><p>É adequado para produção</p></li>
+</ul>
+</li>
+<li><p>Avaliar se o modelo se comporta de forma injusta (Fairness)</p></li>
+</ul>
+</div>
+<div class="section" id="como-realizar">
+<h2>Como Realizar<a class="headerlink" href="#como-realizar" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="como-pre-processar-os-dados-para-o-modelo">
+<h3>Como pré-processar os dados para o modelo?<a class="headerlink" href="#como-pre-processar-os-dados-para-o-modelo" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Podemos realizar engenharia de variáveis para criar variáveis a partir dos dados brutos e facilitar o
+treinamento do modelo, isso envolve todo tipo de transformação, inclusão e agregação de variáveis brutas para criar
+variáveis utilizadas posteriormente. É nessa tarefa que usaremos todo conhecimento gerado nas fases anteriores
+(Entendimento do Negócio e Aquisição e Entendimento dos Dados). Isso é importante pois:</p>
+<ul>
+<li><p>Ajuda a entender como as variáveis se relacionam entre si e como os algoritmos irão utilizar essas variáveis</p></li>
+<li><p>Encontramos um balanceamento entre descobrir variáveis informativas e ao mesmo tempo evitar muitas variáveis não
+relacionadas</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="como-criar-um-modelo-baseline">
+<h3>Como criar um modelo Baseline?<a class="headerlink" href="#como-criar-um-modelo-baseline" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="como-treinar-o-modelo">
+<h3>Como treinar o modelo?<a class="headerlink" href="#como-treinar-o-modelo" title="Permalink to this headline">¶</a></h3>
+<p>Nessa tarefa será escolhido uma classe de algoritmos para trabalhar, o algoritmo escolhido irá depender dos dados.
+O processo de treinamento inclui:</p>
+<ul class="simple">
+<li><p><strong>Escolha de uma estratégia de validação</strong>: Como os dados irão ser separados entre conjunto de dados de treino,
+validação e teste</p></li>
+<li><p><strong>Construição do modelo</strong>: Construir o modelo utilizando os dados de treino</p></li>
+<li><p><strong>Avaliação do modelo</strong>: Avaliar o modelo no conjunto de dados de validação enquanto otimiza os hiperparâmetros e
+posteriormente nos dados de teste.</p></li>
+<li><p><strong>Determinar a “melhor” solução</strong>: Realizar uma comparação da métrica de sucesso entre modelos alternativos</p></li>
+</ul>
+</div>
+<div class="section" id="o-que-e-fairness-em-ia">
+<h3>O que é Fairness em IA?<a class="headerlink" href="#o-que-e-fairness-em-ia" title="Permalink to this headline">¶</a></h3>
+<p>Iremos utilizar a biblioteca Fairlean para esse tipo de avaliação. Um sistema de IA pode comportar-se de forma injusta
+por uma variedade de razões. No Fairlean, um sistema de IA é dito injusto se ele se comporta de forma injusta em termos
+do seu impacto nas pessoas - ou seja, em termos de danos. Dois tipos de dados são observados:</p>
+<ul class="simple">
+<li><p><strong>Danos de alocação</strong>: Estes danos podem ocorrer quando os sistemas de IA favorere ou desfavorece oportunidades, recursos,
+ou informações. Algumas das principais aplicações são em contratações, admissão escolar e empréstimos.</p></li>
+<li><p><strong>Danos de qualidade de serviço</strong>. A qualidade do serviço refere-se a se um sistema funciona tão bem para uma pessoa
+como para outra, mesmo que nenhuma oportunidade, recursos, ou informação sejam favorecidos, ou desfavorecidos.</p></li>
+</ul>
+</div>
+<div class="section" id="o-que-e-data-leakage">
+<h3>O que é Data Leakage?<a class="headerlink" href="#o-que-e-data-leakage" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="artefatos">
+<h2>Artefatos<a class="headerlink" href="#artefatos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/maetthil/TDSPTemplatePtBr/blob/master/Docs/Model/Baseline/Relat%C3%B3rio%20Baseline.md"><strong>Relatório Baseline</strong></a>:
+Relatório descrevendo detalhes sobre o método utilizado como Baseline</p></li>
+<li><p><a class="reference external" href="https://github.com/maetthil/TDSPTemplatePtBr/blob/master/Docs/Model/Model%201/Relat%C3%B3rio%20Modelo.md"><strong>Relatório Modelo</strong></a>:
+Relatório descrevendo detalhes sobre o modelo treinado</p></li>
+<li><p><strong>Avaliação de fairness</strong>: O que podemos concluir sobre o modelo em relação a injustiça?</p></li>
+<li><p><strong>Decisões checkpoints</strong>: Avaliar se o modelo está suficientemente bom para implantação</p>
+<ul>
+<li><p>O modelo responde a questão com confiança suficiente utilizando os dados de teste?</p></li>
+<li><p>Devemos coletar dados adicionais, realizar mais engenharia de dados ou experimentos com outros algoritmos?</p></li>
+<li><p>Devemos testar outras métricas?</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ciclo-de-vida"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="aquisicao.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Aquisição e Entendimento dos Dados</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="implantacao.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Implantação</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Matheus Buarque<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
