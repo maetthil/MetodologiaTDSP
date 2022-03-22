@@ -38,7 +38,7 @@ Iremos utilizar a biblioteca Fairlean para esse tipo de avaliação. Um sistema 
 por uma variedade de razões. No Fairlean, um sistema de IA é dito injusto se ele se comporta de forma injusta em termos
 do seu impacto nas pessoas - ou seja, em termos de danos. Dois tipos de dados são observados:
 
-* **Danos de alocação**: Estes danos podem ocorrer quando os sistemas de IA favorere ou desfavorece oportunidades, recursos, 
+* **Danos de alocação**: Estes danos podem ocorrer quando o sistema de IA favorece ou desfavorece oportunidades, recursos, 
 ou informações. Algumas das principais aplicações são em contratações, admissão escolar e empréstimos.
 * **Danos de qualidade de serviço**. A qualidade do serviço refere-se a se um sistema funciona tão bem para uma pessoa 
 como para outra, mesmo que nenhuma oportunidade, recursos, ou informação sejam favorecidos, ou desfavorecidos.
