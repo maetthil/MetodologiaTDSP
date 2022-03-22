@@ -10,10 +10,10 @@
 
 ## Como Realizar
 ### Como pré-processar os dados para o modelo?
-* Podemos realizar engenharia de variáveis para criar variáveis a partir dos dados brutos e facilitar o 
-  treinamento do modelo, isso envolve todo tipo de transformação, inclusão e agregação de variáveis brutas para criar 
-  variáveis utilizadas posteriormente. É nessa tarefa que usaremos todo conhecimento gerado nas fases anteriores 
-  (Entendimento do Negócio e Aquisição e Entendimento dos Dados). Isso é importante pois:
+Podemos realizar engenharia de variáveis para criar variáveis a partir dos dados brutos e facilitar o 
+treinamento do modelo, isso envolve todo tipo de transformação, inclusão e agregação de variáveis brutas para criar 
+variáveis utilizadas posteriormente. É nessa tarefa que usaremos todo conhecimento gerado nas fases anteriores 
+(Entendimento do Negócio e Aquisição e Entendimento dos Dados). Isso é importante pois:
   * Ajuda a entender como as variáveis se relacionam entre si e como os algoritmos irão utilizar essas variáveis
   * Encontramos um balanceamento entre descobrir variáveis informativas e ao mesmo tempo evitar muitas variáveis não 
     relacionadas
