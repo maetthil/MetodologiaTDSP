@@ -4,8 +4,8 @@
 * Determinar as melhores variáveis para o modelo de machine learning
 * Definir um modelo Baseline
 * Criar um modelo de machine learning e compará-lo com um Baseline:
-  * É informativo que prediz o alvo de forma acurada
-  * É adequado para produção
+  * É informativo e prediz o alvo de forma acurada?
+  * É adequado para produção?
 * Avaliar se o modelo se comporta de forma injusta (Fairness) 
 
 ## Como Realizar
