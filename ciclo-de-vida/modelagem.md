@@ -4,16 +4,16 @@
 * Determinar as melhores variáveis para o modelo de machine learning
 * Definir um modelo Baseline
 * Criar um modelo de machine learning e compará-lo com um Baseline:
-  * É informativo que prediz o alvo de forma acurada
-  * É adequado para produção
+  * É informativo e prediz o alvo de forma acurada?
+  * É adequado para produção?
 * Avaliar se o modelo se comporta de forma injusta (Fairness) 
 
 ## Como Realizar
 ### Como pré-processar os dados para o modelo?
-* Podemos realizar engenharia de variáveis para criar variáveis a partir dos dados brutos e facilitar o 
-  treinamento do modelo, isso envolve todo tipo de transformação, inclusão e agregação de variáveis brutas para criar 
-  variáveis utilizadas posteriormente. É nessa tarefa que usaremos todo conhecimento gerado nas fases anteriores 
-  (Entendimento do Negócio e Aquisição e Entendimento dos Dados). Isso é importante pois:
+Podemos realizar engenharia de variáveis para criar variáveis a partir dos dados brutos e facilitar o 
+treinamento do modelo, isso envolve todo tipo de transformação, inclusão e agregação de variáveis brutas para criar 
+variáveis utilizadas posteriormente. É nessa tarefa que usaremos todo conhecimento gerado nas fases anteriores 
+(Entendimento do Negócio e Aquisição e Entendimento dos Dados). Isso é importante pois:
   * Ajuda a entender como as variáveis se relacionam entre si e como os algoritmos irão utilizar essas variáveis
   * Encontramos um balanceamento entre descobrir variáveis informativas e ao mesmo tempo evitar muitas variáveis não 
     relacionadas
@@ -38,7 +38,7 @@ Iremos utilizar a biblioteca Fairlean para esse tipo de avaliação. Um sistema 
 por uma variedade de razões. No Fairlean, um sistema de IA é dito injusto se ele se comporta de forma injusta em termos
 do seu impacto nas pessoas - ou seja, em termos de danos. Dois tipos de dados são observados:
 
-* **Danos de alocação**: Estes danos podem ocorrer quando os sistemas de IA favorere ou desfavorece oportunidades, recursos, 
+* **Danos de alocação**: Estes danos podem ocorrer quando o sistema de IA favorece ou desfavorece oportunidades, recursos, 
 ou informações. Algumas das principais aplicações são em contratações, admissão escolar e empréstimos.
 * **Danos de qualidade de serviço**. A qualidade do serviço refere-se a se um sistema funciona tão bem para uma pessoa 
 como para outra, mesmo que nenhuma oportunidade, recursos, ou informação sejam favorecidos, ou desfavorecidos.
