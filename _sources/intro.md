@@ -1,6 +1,6 @@
-# Team Data Science Process
+# Sobre esse livro
 
-É uma metodologia ágil e iterativa de ciência de dados para entrega de soluções de análise preditivas e 
+Team Data Science Process (TDSP) é uma metodologia ágil e iterativa de ciência de dados para entrega de soluções de análise preditivas e 
 aplicações inteligentes de maneira eficiente. O seu objetivo é ajudar as empresas a obterem inteiramente 
 os benefícios do seu setor analítico
 
